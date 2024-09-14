@@ -19,11 +19,11 @@ class Question4
         List<Faturamento> listFaturamento = new ArrayList<>();
 
         // Adiciona estados e faturamento
-        listFaturamento.add(new Faturamento("SP", 6783643));
-        listFaturamento.add(new Faturamento("RJ", 36678.66));
-        listFaturamento.add(new Faturamento("MG", 29229.88));
-        listFaturamento.add(new Faturamento("ES", 27165.48));
-        listFaturamento.add(new Faturamento("Outros", 19849.53));
+        listFaturamento.add(new Faturamento("SP", (double)67836.43));
+        listFaturamento.add(new Faturamento("RJ", (double)36678.66));
+        listFaturamento.add(new Faturamento("MG", (double)29229.88));
+        listFaturamento.add(new Faturamento("ES", (double)27165.48));
+        listFaturamento.add(new Faturamento("Outros", (double)19849.53));
 
         // percentual
         setPercentual(listFaturamento);
