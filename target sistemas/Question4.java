@@ -16,14 +16,14 @@ class Question4
 {
     public static void main(String[] args) 
     {
-        List<Faturamento> listFaturamento = new ArrayList<>();
+        List<FaturamentoUF> listFaturamento = new ArrayList<>();
 
         // Adiciona estados e faturamento
-        listFaturamento.add(new Faturamento("SP", (double)67836.43));
-        listFaturamento.add(new Faturamento("RJ", (double)36678.66));
-        listFaturamento.add(new Faturamento("MG", (double)29229.88));
-        listFaturamento.add(new Faturamento("ES", (double)27165.48));
-        listFaturamento.add(new Faturamento("Outros", (double)19849.53));
+        listFaturamento.add(new FaturamentoUF("SP", (double)67836.43));
+        listFaturamento.add(new FaturamentoUF("RJ", (double)36678.66));
+        listFaturamento.add(new FaturamentoUF("MG", (double)29229.88));
+        listFaturamento.add(new FaturamentoUF("ES", (double)27165.48));
+        listFaturamento.add(new FaturamentoUF("Outros", (double)19849.53));
 
         // percentual
         setPercentual(listFaturamento);
@@ -34,16 +34,16 @@ class Question4
         return;
     }
 
-    public static void setPercentual(List<Faturamento> listFaturamento)
+    public static void setPercentual(List<FaturamentoUF> listFaturamento)
     {
-        for (Faturamento objeto : listFaturamento)
+        for (FaturamentoUF objeto : listFaturamento)
         {
             objeto.setPercentual();
         }
         return;
     }
 
-    public static void printMetricas(List<Faturamento> listFaturamento) 
+    public static void printMetricas(List<FaturamentoUF> listFaturamento) 
     {
         // Cabeçalho da tabela
         System.out.printf("%-10s | %-15s | %-18s | %-30s%n", 
@@ -51,16 +51,16 @@ class Question4
         System.out.println("-----------------------------------------------------------");
 
         // Exibe os dados da tabela
-        for (Faturamento faturamento : listFaturamento) {
+        for (FaturamentoUF faturamento : listFaturamento) {
             System.out.printf("%-11s | %-16.2f | %-18.2f | %-30.2f%%%n",
-                              faturamento.getUF(), faturamento.getFat(), Faturamento.faturamentoTotal, faturamento.getPercentual());
+                              faturamento.getUF(), faturamento.getFat(), FaturamentoUF.faturamentoTotal, faturamento.getPercentual());
         }
 
         return;
     }
 }
 
-class Faturamento
+class FaturamentoUF
 {
     static double faturamentoTotal = 0;
 
@@ -68,11 +68,11 @@ class Faturamento
     double faturamento;
     double percentual;
 
-    public Faturamento(String uf, double faturamento)
+    public FaturamentoUF(String uf, double faturamento)
     {
         this.uf = uf;
         this.faturamento = faturamento;
-        Faturamento.faturamentoTotal = Faturamento.faturamentoTotal + faturamento; // Acumula o faturamento total
+        FaturamentoUF.faturamentoTotal = FaturamentoUF.faturamentoTotal + faturamento; // Acumula o faturamento total
     }
 
     public String getUF()
@@ -91,11 +91,11 @@ class Faturamento
 
     public double getFatTotal()
     {
-        return Faturamento.faturamentoTotal;
+        return FaturamentoUF.faturamentoTotal;
     }
 
     public void setPercentual()
     {
-        this.percentual = (this.faturamento / Faturamento.faturamentoTotal) * 100; // %
+        this.percentual = (this.faturamento / FaturamentoUF.faturamentoTotal) * 100; // %
     }
 }
