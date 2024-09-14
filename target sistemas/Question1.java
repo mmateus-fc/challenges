@@ -5,7 +5,7 @@ Imprimir(SOMA);
 Ao final do processamento, qual será o valor da variável SOMA?
  */
 
-class Question_1 
+class Question1 
 {
     public static void main(String[] args) 
     {
