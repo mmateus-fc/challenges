@@ -6,7 +6,7 @@ a) Essa string pode ser informada através de qualquer entrada de sua preferênc
 b) Evite usar funções prontas, como, por exemplo, reverse;
 */
 
-class Question_5 
+class Question5 
 {
     public static void main(String[] args) 
     {

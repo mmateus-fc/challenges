@@ -8,7 +8,7 @@ ele calcule a sequência de Fibonacci e retorne uma mensagem avisando se o núme
 import java.util.ArrayList;
 import java.util.List;
 
-class Question_2 
+class Question2 
 {
     public static void main(String[] args) 
     {

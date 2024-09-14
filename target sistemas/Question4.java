@@ -12,7 +12,7 @@ Escreva um programa na linguagem que desejar onde calcule o percentual de repres
 import java.util.ArrayList;
 import java.util.List;
 
-class Question_4 
+class Question4 
 {
     public static void main(String[] args) 
     {
